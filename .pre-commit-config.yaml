@@ -1,0 +1,46 @@
+ci:
+  skip: [shellcheck]
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: check-added-large-files
+    args: [--maxkb=2000]
+  - id: check-case-conflict
+  - id: check-executables-have-shebangs
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-json
+  - id: check-yaml
+  - id: destroyed-symlinks
+  - id: end-of-file-fixer
+    files: \.(cook|md|sh|json|yml|yaml)$
+  - id: mixed-line-ending
+  - id: trailing-whitespace
+    files: \.(cook|md|sh|json|yml|yaml)$
+  # - id: pretty-format-json
+  #   args: [--autofix]
+- repo: https://github.com/koalaman/shellcheck-precommit
+  rev: v0.9.0
+  hooks:
+  - id: shellcheck
+- repo: https://github.com/pecigonzalo/pre-commit-shfmt
+  rev: v2.1.0
+  hooks:
+  - id: shell-fmt-go
+    args:
+    - -w
+    - -s
+    - -l
+    - -i
+    - '2'
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.7.0
+  hooks:
+  - id: pretty-format-yaml
+    args: [--autofix, --indent, '2']
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.33.0
+  hooks:
+  - id: markdownlint-fix
+    args: [--disable=MD013, --disable=MD041]

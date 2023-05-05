@@ -1,0 +1,40 @@
+metadata:
+  time: 20 minutes
+  source: https://www.sbfoods.co.jp/recipe/detail/08758.html
+  servings: '2'
+  name: ３つのスパイスで作る！なすのキーマカレー
+ingredients:
+- name: ご飯
+  amount: 適量
+- name: サラダ油
+  amount: 2 tbsp
+- name: クミン
+  amount: 2 tsp
+- name: 塩
+  amount: 0.5 tsp
+- name: ターメリック
+  amount: 2 tsp
+- name: ゆで卵
+  amount: 適量
+- name: コリアンダー
+  amount: 2 tsp
+- name: 合いびき肉
+  amount: 150 g
+- name: 玉ねぎ
+  amount: half
+- name: おろしにんにく
+  amount: 0.5 tsp
+- name: おろししょうが
+  amount: 0.5 tsp
+- name: なす
+  amount: '2'
+- name: カットトマトの水煮缶
+  amount: 200 g
+cookware:
+- name: フライパン
+- name: 器
+steps:
+- description: おろしにんにく、おろししょうが、クミン、コリアンダー、ターメリックを混ぜ合わせます。
+- description: フライパンにサラダ油を熱し、合いびき肉、みじん切りにした玉ねぎ、1.5cm角ほどのさいの目切りにしたなす、そして混ぜ合わせたスパイスを加え、中火で5 minutesほど炒めます。
+- description: カットトマトの水煮缶、塩を加え、さらに3 minutes炒めます。
+- description: 器にご飯を盛り、できあがったカレーをかけ、お好みでゆで卵をのせます。

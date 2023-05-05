@@ -1,0 +1,84 @@
+{
+  "ingredients": [
+    {
+      "name": "合いびき肉",
+      "amount": "150 g"
+    },
+    {
+      "name": "おろししょうが",
+      "amount": "0.5 tsp"
+    },
+    {
+      "amount": "適量",
+      "name": "ゆで卵"
+    },
+    {
+      "name": "おろしにんにく",
+      "amount": "0.5 tsp"
+    },
+    {
+      "amount": "2 tsp",
+      "name": "ターメリック"
+    },
+    {
+      "amount": "2",
+      "name": "なす"
+    },
+    {
+      "amount": "0.5 tsp",
+      "name": "塩"
+    },
+    {
+      "name": "コリアンダー",
+      "amount": "2 tsp"
+    },
+    {
+      "name": "玉ねぎ",
+      "amount": "half"
+    },
+    {
+      "name": "サラダ油",
+      "amount": "2 tbsp"
+    },
+    {
+      "amount": "2 tsp",
+      "name": "クミン"
+    },
+    {
+      "name": "カットトマトの水煮缶",
+      "amount": "200 g"
+    },
+    {
+      "amount": "適量",
+      "name": "ご飯"
+    }
+  ],
+  "cookware": [
+    {
+      "name": "フライパン"
+    },
+    {
+      "name": "器"
+    }
+  ],
+  "metadata": {
+    "source": "https://www.sbfoods.co.jp/recipe/detail/08758.html",
+    "name": "３つのスパイスで作る！なすのキーマカレー",
+    "servings": "2",
+    "time": "20 minutes"
+  },
+  "steps": [
+    {
+      "description": "おろしにんにく、おろししょうが、クミン、コリアンダー、ターメリックを混ぜ合わせます。"
+    },
+    {
+      "description": "フライパンにサラダ油を熱し、合いびき肉、みじん切りにした玉ねぎ、1.5cm角ほどのさいの目切りにしたなす、そして混ぜ合わせたスパイスを加え、中火で5 minutesほど炒めます。"
+    },
+    {
+      "description": "カットトマトの水煮缶、塩を加え、さらに3 minutes炒めます。"
+    },
+    {
+      "description": "器にご飯を盛り、できあがったカレーをかけ、お好みでゆで卵をのせます。"
+    }
+  ]
+}
