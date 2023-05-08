@@ -35,12 +35,12 @@ repos:
     - -i
     - '2'
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.7.0
+  rev: v2.8.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --indent, '2']
 - repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.33.0
+  rev: v0.34.0
   hooks:
   - id: markdownlint-fix
     args: [--disable=MD013, --disable=MD041]
