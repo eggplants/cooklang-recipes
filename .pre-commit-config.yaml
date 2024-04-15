@@ -2,7 +2,7 @@ ci:
   skip: [shellcheck]
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v4.6.0
   hooks:
   - id: check-added-large-files
     args: [--maxkb=2000]
@@ -25,7 +25,7 @@ repos:
   hooks:
   - id: shellcheck
 - repo: https://github.com/pecigonzalo/pre-commit-shfmt
-  rev: v2.1.0
+  rev: v2.2.0
   hooks:
   - id: shell-fmt-go
     args:
