@@ -2,22 +2,23 @@
 
 set -euo pipefail
 
-COOK_VERSION="0.1.5"
+COOK_VERSION="0.8.0"
 BASE_COOK_DIST="https://github.com/cooklang/CookCLI/releases/download/v${COOK_VERSION}"
 
 _install_cook() {
-  if ! command -v curl unzip &>/dev/null; then
-    echo "install: curl and unzip" >&2
+  if ! command -v curl tar &>/dev/null; then
+    echo "install: curl and tar" >&2
     return 1
   fi
 
-  local dl_zip_path=".cook_${RANDOM}.zip"
-  curl -L "$1" --output "$dl_zip_path"
-  unzip "$dl_zip_path" "cook" -d "${dl_zip_path//.zip/}"
-  if ! mv "${dl_zip_path//.zip//cook}" /usr/local/bin/cook; then
-    sudo mv "${dl_zip_path//.zip//cook}" /usr/local/bin/cook
+  local dl_path=".cook_${RANDOM}.tar.gz"
+  curl -L "$1" --output "$dl_path"
+  tar -zxvf "$dl_path" "cook"
+  chmod +x cook
+  if ! mv cook /usr/local/bin/cook; then
+    sudo mv cook /usr/local/bin/cook
   fi
-  rm -rf "$dl_zip_path" "${dl_zip_path//.zip/}"
+  rm -rf "$dl_path"
   echo "installed: $(command -v cook)"
 }
 
@@ -38,17 +39,18 @@ main() {
   fi
 
   if [[ "$(uname -s)" == "Darwin" ]]; then
-    _install_cook "${BASE_COOK_DIST}/CookCLI_${COOK_VERSION}_darwin_amd64_arm64.zip"
+    _install_cook "${BASE_COOK_DIST}/cook-x86_64-apple-darwin.tar.gz"
     return $?
   fi
 
   case "$(uname -m)" in
   x86_64 | amd64)
-    _install_cook "${BASE_COOK_DIST}/CookCLI_${COOK_VERSION}_linux_amd64.zip"
+    _install_cook "${BASE_COOK_DIST}/cook-x86_64-unknown-linux-gnu.tar.gz"
     return $?
     ;;
   arm64)
-    _install_cook "${BASE_COOK_DIST}/CookCLI_${COOK_VERSION}_linux_arm64.zip"
+    # cook-arm-unknown-linux-musleabihf.tar.gz
+    _install_cook "${BASE_COOK_DIST}/cook-arm-unknown-linux-musleabihf.tar.gz"
     return $?
     ;;
   esac
