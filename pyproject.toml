@@ -1,19 +1,33 @@
-[tool.poetry]
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+  "poetry-core>=2",
+]
+
+[project]
 name = "cooklang-recipe"
 version = "0.1.0"
 description = "Cooklang recipe vault"
-authors = ["eggplants <w10776e8w@yahoo.co.jp>"]
-license = "MIT"
 readme = "README.md"
-packages = [{include = "cooklang_recipe"}]
+license = { text = "MIT" }
+authors = [
+  { name = "eggplants", email = "w10776e8w@yahoo.co.jp" },
+]
+requires-python = ">=3.11,<4"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+urls.Repository = "https://github.com/eggplants/cooklang-recipes"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-
+[tool.poetry]
+requires-poetry = ">=2.0"
+package-mode = false
+packages = [
+  { include = "cooklang_recipe" },
+]
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.1"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
