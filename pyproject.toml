@@ -1,8 +1,7 @@
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = [
-  "poetry-core>=2",
-]
+build-backend = "hatchling.build"
+
+requires = [ "hatchling" ]
 
 [project]
 name = "cooklang-recipe"
@@ -10,24 +9,25 @@ version = "0.1.0"
 description = "Cooklang recipe vault"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [
-  { name = "eggplants", email = "w10776e8w@yahoo.co.jp" },
-]
-requires-python = ">=3.11,<4"
+authors = [ { name = "eggplants", email = "w10776e8w@yahoo.co.jp" } ]
+requires-python = ">=3.13,<3.14"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
+
 urls.Repository = "https://github.com/eggplants/cooklang-recipes"
 
-[tool.poetry]
-requires-poetry = ">=2.0"
-package-mode = false
-packages = [
-  { include = "cooklang_recipe" },
+[dependency-groups]
+dev = [
+  "pre-commit",
 ]
 
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^3.3.1"
+[tool.hatch.build.targets.sdist]
+include = [ "cooklang_recipe" ]
+
+[tool.hatch.build.targets.wheel]
+include = [ "cooklang_recipe" ]
+
+[tool.uv]
+package = false
