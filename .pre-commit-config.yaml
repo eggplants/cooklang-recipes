@@ -3,7 +3,7 @@ ci:
   autoupdate_schedule: monthly
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v5.0.0
+  rev: v6.0.0
   hooks:
   - id: check-added-large-files
     args: [--maxkb=2000]
@@ -22,7 +22,7 @@ repos:
   # - id: pretty-format-json
   #   args: [--autofix]
 - repo: https://github.com/koalaman/shellcheck-precommit
-  rev: v0.10.0
+  rev: v0.11.0
   hooks:
   - id: shellcheck
 - repo: https://github.com/pecigonzalo/pre-commit-shfmt
@@ -36,16 +36,16 @@ repos:
     - -i
     - '2'
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.14.0
+  rev: v2.15.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --indent, '2']
 - repo: https://github.com/tox-dev/pyproject-fmt
-  rev: v2.6.0
+  rev: v2.11.1
   hooks:
   - id: pyproject-fmt
 - repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.45.0
+  rev: v0.46.0
   hooks:
   - id: markdownlint-fix
     args: [--disable=MD013, --disable=MD041]
